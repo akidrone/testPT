@@ -1,0 +1,6 @@
+{"content":"<div><form method='post' escapeXml='true' action='https://admin.megasportcasino.com/ims/'
+ name='acsForm'><div style='display: none'><textarea name='ticket' cols='80' rows='10'>ST-191055-9uflxzjyWruWejLdgHVj1fdu4MDEUtEwdFha13Fm9pUSCnERfS-LL
+<\/textarea><\/div><noscript><p>You are being redirected to https://admin.megasportcasino.com/ims/ Please
+ click \"Continue\" to continue your login.<\/p><p><input value='Continue' type='submit'><\/p><\/noscript
+><\/form><\/div>","_tapestry":{"inits":[["t5/core/pageinit:evalJavaScript","document.acsForm.submit(
+);"]]}}

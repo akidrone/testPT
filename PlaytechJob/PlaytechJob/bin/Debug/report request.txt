@@ -1,0 +1,137 @@
+POST https://admin.megasportcasino.com/report_view.php?reportcode=52601 HTTP/1.1
+Accept: */*
+Origin: https://admin.megasportcasino.com
+Accept-Encoding: gzip, deflate
+Accept-Language: en-US, en; q=0.8
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36
+Content-Type: multipart/form-data; boundary="3bee7430-f7c5-4f3d-ba46-a89435b16821"
+Host: admin.megasportcasino.com
+Cookie: BIGipServersm_pool_admin.megasportcasino.com_8080=2173573036.36895.0000; backend_theme=ims; PHPSESSID=ST-268434-sDcymkBlbeA5FgZO7xNLvd9Iek9WcQZInT9QaWJS6bkZm0dDim-LL; BIGipServersm_pool_admin.megasportcasino.com=2173573036.20480.0000; SERVICETICKET=ST-268434-sDcymkBlbeA5FgZO7xNLvd9Iek9WcQZInT9QaWJS6bkZm0dDim-LL; csrf_token=smOYck3ccyltMLOb5M7u1rIPLHxyhJsN5DqmslKLXwQ%3D
+Content-Length: 3565
+Expect: 100-continue
+
+--3bee7430-f7c5-4f3d-ba46-a89435b16821
+Content-Type: text/plain; charset=utf-8
+Content-Disposition: form-data; name="action[exportcsv]"
+
+Export all results (CSV)
+--3bee7430-f7c5-4f3d-ba46-a89435b16821
+Content-Type: text/plain; charset=utf-8
+Content-Disposition: form-data; name="csrf_token"
+
+smOYck3ccyltMLOb5M7u1rIPLHxyhJsN5DqmslKLXwQ=
+--3bee7430-f7c5-4f3d-ba46-a89435b16821
+Content-Type: text/plain; charset=utf-8
+Content-Disposition: form-data; name="reportgroups"
+
+0
+--3bee7430-f7c5-4f3d-ba46-a89435b16821
+Content-Type: text/plain; charset=utf-8
+Content-Disposition: form-data; name="reportcode"
+
+52601
+--3bee7430-f7c5-4f3d-ba46-a89435b16821
+Content-Type: text/plain; charset=utf-8
+Content-Disposition: form-data; name="casino"
+
+
+--3bee7430-f7c5-4f3d-ba46-a89435b16821
+Content-Type: text/plain; charset=utf-8
+Content-Disposition: form-data; name="username"
+
+
+--3bee7430-f7c5-4f3d-ba46-a89435b16821
+Content-Disposition: form-data; name=usernamecsv; filename=f1; filename*=utf-8''f1
+
+
+--3bee7430-f7c5-4f3d-ba46-a89435b16821
+Content-Type: text/plain; charset=utf-8
+Content-Disposition: form-data; name="usernamecsvheader"
+
+1
+--3bee7430-f7c5-4f3d-ba46-a89435b16821
+Content-Type: text/plain; charset=utf-8
+Content-Disposition: form-data; name="startdate"
+
+2017-06-20 00:00
+--3bee7430-f7c5-4f3d-ba46-a89435b16821
+Content-Type: text/plain; charset=utf-8
+Content-Disposition: form-data; name="enddate"
+
+2017-06-21 00:00
+--3bee7430-f7c5-4f3d-ba46-a89435b16821
+Content-Type: text/plain; charset=utf-8
+Content-Disposition: form-data; name="method"
+
+
+--3bee7430-f7c5-4f3d-ba46-a89435b16821
+Content-Type: text/plain; charset=utf-8
+Content-Disposition: form-data; name="ccmethod"
+
+
+--3bee7430-f7c5-4f3d-ba46-a89435b16821
+Content-Type: text/plain; charset=utf-8
+Content-Disposition: form-data; name="status"
+
+
+--3bee7430-f7c5-4f3d-ba46-a89435b16821
+Content-Type: text/plain; charset=utf-8
+Content-Disposition: form-data; name="type"
+
+
+--3bee7430-f7c5-4f3d-ba46-a89435b16821
+Content-Type: text/plain; charset=utf-8
+Content-Disposition: form-data; name="country"
+
+
+--3bee7430-f7c5-4f3d-ba46-a89435b16821
+Content-Type: text/plain; charset=utf-8
+Content-Disposition: form-data; name="currency"
+
+
+--3bee7430-f7c5-4f3d-ba46-a89435b16821
+Content-Type: text/plain; charset=utf-8
+Content-Disposition: form-data; name="amount"
+
+
+--3bee7430-f7c5-4f3d-ba46-a89435b16821
+Content-Disposition: form-data; name=fundreversals; filename=f2; filename*=utf-8''f2
+
+
+--3bee7430-f7c5-4f3d-ba46-a89435b16821
+Content-Type: text/plain; charset=utf-8
+Content-Disposition: form-data; name="fundreversals_header"
+
+1
+--3bee7430-f7c5-4f3d-ba46-a89435b16821
+Content-Type: text/plain; charset=utf-8
+Content-Disposition: form-data; name="externaltranid"
+
+
+--3bee7430-f7c5-4f3d-ba46-a89435b16821
+Content-Type: text/plain; charset=utf-8
+Content-Disposition: form-data; name="filename"
+
+report
+--3bee7430-f7c5-4f3d-ba46-a89435b16821
+Content-Type: text/plain; charset=utf-8
+Content-Disposition: form-data; name="rowsperpage"
+
+100
+--3bee7430-f7c5-4f3d-ba46-a89435b16821
+Content-Type: text/plain; charset=utf-8
+Content-Disposition: form-data; name="action[exportcsv]"
+
+Export all results (CSV)
+--3bee7430-f7c5-4f3d-ba46-a89435b16821
+Content-Type: text/plain; charset=utf-8
+Content-Disposition: form-data; name="page"
+
+0
+--3bee7430-f7c5-4f3d-ba46-a89435b16821
+Content-Type: text/plain; charset=utf-8
+Content-Disposition: form-data; name="truevalue"
+
+1
+--3bee7430-f7c5-4f3d-ba46-a89435b16821--

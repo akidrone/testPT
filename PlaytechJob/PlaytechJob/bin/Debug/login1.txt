@@ -1,0 +1,15 @@
+curl 'https://aas.megasportcasino.com/aas/login.loginform.loginform' 
+
+-H 'Accept: */*' 
+-H 'Accept-Encoding: gzip, deflate, br' 
+-H 'Cookie: JSESSIONID=8ACFCF877AA0ECEA99C22DE0A66E2ED8' 
+-H 'X-Requested-With: XMLHttpRequest' 
+
+-H 'Content-Type: application/x-www-form-urlencoded; charset=UTF-8' 
+
+-H 'Accept-Language: en-US,en;q=0.5' 
+-H 'Connection: keep-alive' 
+-H 'Host: aas.megasportcasino.com' 
+-H 'Referer: https://aas.megasportcasino.com/aas/?method=POST&service=https%3A%2F%2Fadmin.megasportcasino.com%2Fims%2F' 
+-H 'User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:53.0) Gecko/20100101 Firefox/53.0' 
+--data 't%3Azoneid=loginZone&t%3Asubmit=%5B%22loginButton%22%2C%22loginButton%22%5D&t%3Aformname=loginForm&t%3Aformdata=FlmA6vkQ09duqLqIMmWgGnPwWLw%3D%3AH4sIAAAAAAAAAJVSwUoDMRR8LSwWCwqKIBY96XUL4smCoIeisKhQvdRTNvtaU7ObmLy2qwc%2FxS8Qf6Kg4kH8BT%2FAqwfxYHZrVUQsXpZkMjOZzL6rZ%2FD6FZgPVFsk6zL7tpSJ%2Fa5Fk7AYwRpY5Sr2tWRnhPzYDzH1uTLoh8yivxlaMoxT3YnqAmW03EDq6pXDQflp7vatCIUAylwlZJTcdX4EM0GH9VhVsqRdbZARSbuWaoLS6MZxaTb%2BlWbfKI7WNrphLKwVKhlcR2utl8uHIkCqf7tLM2v7ykRgT%2BECwCUbIX%2ByM7LXX4LKT0a%2BIsFP3NtHluUcPMjBcZqh8SIs%2FCRxKdCR3ObTd3KI7ThsjOLvuGGXSCVZ22u%2Ft%2B1QrRJnZv2tnLucN0ybnFzHr%2BzmfvvuMS7CRBO8CFtomlCKhGWhxKgJU%2B53CibFOTaIEQZQ%2BsgdZbEKRzCRTQymRDB79G1c9sIOcqq5iUKJsRNkE5VLAvCw54B8k2r4KnkYT2cH0%2FodjNJyaO4CAAA%3D&username=abayanid&password=TemporaryPass1&loginTicket=LT-88752-fNOhQwwbICp9WdToahQyxciRGSpyjjmfk59rTI2ahh9EDlzzXH&clientInfo=%7B%22platform%22%3A%22Win64%22%2C%22language%22%3A%22en-US%22%2C%22userAgent%22%3A%22Mozilla%2F5.0+(Windows+NT+6.1%3B+Win64%3B+x64%3B+rv%3A53.0)+Gecko%2F20100101+Firefox%2F53.0%22%2C%22windowWidth%22%3A1600%2C%22windowHeight%22%3A789%2C%22screenWidth%22%3A1600%2C%22screenHeight%22%3A900%2C%22javaEnabled%22%3Afalse%2C%22browser%22%3A%22Firefox%22%7D'

@@ -1,0 +1,9 @@
+C:\Users\mpenava\Documents\Repos\PlaytechJob\bin\Debug\PlaytechJob.exe.config
+D:\Documents\Bayview\Document\June 2017\PlaytechJob\PlaytechJob\bin\Debug\PlaytechJob.exe.config
+D:\Documents\Bayview\Document\June 2017\PlaytechJob\PlaytechJob\bin\Debug\PlaytechJob.exe
+D:\Documents\Bayview\Document\June 2017\PlaytechJob\PlaytechJob\bin\Debug\PlaytechJob.pdb
+D:\Documents\Bayview\Document\June 2017\PlaytechJob\PlaytechJob\bin\Debug\AngleSharp.dll
+D:\Documents\Bayview\Document\June 2017\PlaytechJob\PlaytechJob\bin\Debug\AngleSharp.xml
+D:\Documents\Bayview\Document\June 2017\PlaytechJob\PlaytechJob\obj\Debug\PlaytechJob.csprojResolveAssemblyReference.cache
+D:\Documents\Bayview\Document\June 2017\PlaytechJob\PlaytechJob\obj\Debug\PlaytechJob.exe
+D:\Documents\Bayview\Document\June 2017\PlaytechJob\PlaytechJob\obj\Debug\PlaytechJob.pdb

@@ -1,0 +1,421 @@
+  <html>
+  <head>
+  <title>Reports</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link rel="stylesheet" href="/styles/main.css"></link>
+    <script type="text/javascript">
+  var reportcode_values = new Array();
+  var reportcode_names = new Array();
+      
+          reportcode_values['0'] = new Array("Bonus Usage","Casino game session with ip and serial","Comps for period","Customer Balances Total","Frequency report","Frequency report by CSV","Gaming report","Manual bonuses","Player logins","Players login IP and serials","Players transactions","User-advertiser information summary 2","VIP Tracking");
+  reportcode_names['0'] = new Array("11","49401","36891","1931","18001","18801","391","46401","42401","35601","52601","61001","471");
+      
+          reportcode_values['6801'] = new Array("Bonus Usage","Casino game session with ip and serial","Comps for period","Customer Balances Total","Frequency report","Manual bonuses","Player logins");
+  reportcode_names['6801'] = new Array("11","49401","36891","1931","18001","46401","42401");
+      
+          reportcode_values['6201'] = new Array("Frequency report by CSV","Gaming report","Players login IP and serials","Players transactions","User-advertiser information summary 2");
+  reportcode_names['6201'] = new Array("18801","391","35601","52601","61001");
+      
+          reportcode_values['nc'] = new Array("VIP Tracking");
+  reportcode_names['nc'] = new Array("471");
+    // Usage
+  // onchange=\"ChangeSubselect(this, target_obj, target_names_array, targed_ids_array);\"
+  function ChangeSubselect(obj, target, names, values, def_val)
+  {
+    var id;
+
+    if (obj.type == 'select')
+    {
+      id = obj.options[obj.options.selectedIndex].value;
+    }
+    else
+    {
+      id = obj.value;
+    }
+
+    if (target == null)
+    {
+      return;
+    }
+
+    var tmpOption = new Option();
+
+    // remembers current selection
+    current_target_selection = target.options[target.options.selectedIndex].value;
+    reset_target_selection = 1;
+
+    target.options.length=0;
+        tmpOption = new Option("Click to select", '');
+    target.options[0]=tmpOption;
+    
+
+    if (names[id] != null)
+    {
+      for (var i=0; names[id][i]!=null; i++)
+      {
+        tmpOption = new Option(values[id][i],names[id][i]);
+        target.options[i+1] = tmpOption;
+        if (current_target_selection == names[id][i])
+        {
+          reset_target_selection = 0;
+          current_target_selectedindex = i+1;
+        }
+      }
+    }
+    if (reset_target_selection)
+    {
+      target.options.selectedIndex = 0;
+    }
+    else
+    {
+      target.options.selectedIndex = current_target_selectedindex;
+    }
+  }
+  </script>
+  <script type="text/javascript" src="/jscombine.php?js_lib/prototype,js_lib/naf,js_lib/table"></script>
+  <script language="JavaScript">
+  function showhelp(id, linkid)
+  {
+    var el = document.getElementById(id);
+    var link = document.getElementById(linkid);
+    if (el.style.display == "none")
+    {
+      el.style.display = "";
+      link.innerHTML = '<img src="images/reports/help.jpg" border="0" vspace="5">';
+    }
+    else
+    {
+      el.style.display = "none";
+      link.innerHTML = '<img src="images/reports/help.jpg" border="0" vspace="5">';
+    }
+  }
+
+  function setstate_buttons(state)
+  {
+    var elems = document.getElementsByTagName('INPUT');
+    for (var i = 0; i < elems.length; i++)
+    {
+      var el = elems[i];
+      if (el.type == 'submit' || el.type == 'button')
+      {
+        el.disabled = !state;
+      }
+    }
+  }
+
+  var selfields = new Array();
+  var seq = 1;
+
+  function selectfield(fieldcode, column_name)
+  {
+    var el = document.getElementById('field' + fieldcode);
+    var inputEl = document.getElementById('inputfield' + fieldcode);
+    if(el)
+    {
+      if (selfields[fieldcode])
+      {
+        delete selfields[fieldcode];
+        el.style.backgroundColor = "#F6F6F1";
+      }
+      else if (el.innerHTML != "")
+      {
+        selfields[fieldcode] = new Array(fieldcode, el.innerHTML, column_name);
+        inputEl.checked = true;
+      }
+    }
+  }
+
+  function port(event,maxcode)
+  {
+    var str = "";
+    for (i = 0; maxcode >= i; i++)
+    {
+      if (selfields[i])
+        str += selfields[i][0] + "=>" + selfields[i][2] + ";";
+     }
+    document.getElementById('y_fields').value = str;
+    default_on_click(event);
+  }
+
+  </script>
+  </head>
+  <body
+    onLoad="
+      setstate_buttons(true);
+      ChangeSubselect(
+        document.forms[0].elements['reportgroups'],
+        document.forms[0].elements['reportcode'],
+        reportcode_names, reportcode_values
+      );
+          "
+  >
+
+  <div class="title">Report</div>
+  <form enctype="multipart/form-data" method="post" action="/report_view.php?reportcode=35601" target="_self"  onsubmit="default_on_submit(event)">
+<input type="hidden" id="submit_button_value" name="submit_button_value" />
+<input type="hidden" name="csrf_token" value="1N5SUR+R78amGM7bNdW9Uh4ZupWj1m0yDQgE0VFMud8=" />
+<script type="text/javascript">typeof(window.NafLoader)=='undefined'&&document.write('<script type="text/javascript" src="/js_lib/loader.js"><\/script>');</script><script type="text/javascript">NafLoader.loadScript("\/js_lib\/form.js");</script>
+<script type="text/javascript">typeof(window.NafLoader)=='undefined'&&document.write('<script type="text/javascript" src="/js_lib/loader.js"><\/script>');</script><script type="text/javascript">NafLoader.loadScript("\/js\/checkMandatoryFields.js");</script>
+<script type="text/javascript">typeof(window.NafLoader)=='undefined'&&document.write('<script type="text/javascript" src="/js_lib/loader.js"><\/script>');</script><script type="text/javascript">NafLoader.loadScript("\/js_lib\/resizeMandatoryField.js");</script>
+<script type="text/javascript">
+  //<![CDATA[
+  if (!window.oohFormsMandatoryCheck && typeof MandatoryCheck !== 'undefined') {window.oohFormsMandatoryCheck = new MandatoryCheck();}
+  window.default_on_submit = function (event)
+  {
+    if (typeof AjaxPage != 'undefined') return;
+    //alert('Event: ' + event + ' Event type: ' + event.type + ' Event Phase: ' + event.eventPhase + ' Event currenttarget: ' + event.currentTarget + ' Event target: ' + event.target + ' Event srcElement: ' + event.srcElement);
+    frm = event.srcElement ? event.srcElement : event.target;
+    btnValue = frm.submit_button_value ? frm.submit_button_value.value : '';
+    if (btnValue.substr(0, 6) == 'Export' || btnValue.substr(0, 7) == 'Preview')
+    {
+      return true;
+    }
+    elems = document.getElementsByTagName('INPUT');
+    for (i = 0; i < elems.length; i++)
+    {
+      el = elems[i];
+      if (el.type == 'submit' || el.type == 'button')
+      {
+        el.style.color = 'silver';
+        el.disabled = true;
+      }
+    }
+    //]]>
+    elems = document.getElementsByTagName('A');
+    for (i = 0; i < elems.length; i++)
+    {
+      el = elems[i];
+        el.style.display = 'none';
+    }
+  }
+  window.default_on_click = function (event, ask_confirmation)
+  {
+    if (ask_confirmation)
+    {
+      if(!confirm("Click OK to confirm")) return false;
+    }
+    if (typeof AjaxPage != 'undefined') return;
+    btn = window.event ? window.event.srcElement : event.target;
+    if (btn && btn.form)
+    {
+      el = btn.form.submit_button_value;
+      el.name = btn.name;
+      el.value = btn.value;
+    }
+    return true;
+  }
+</script>
+    <table class="form" width="50%">
+    <tr>
+      <td width="20%">Category:</td>
+      <td width="80%">
+        <select name="reportgroups" id="reportgroups" onchange="ChangeSubselect(this, document.forms[0].elements['reportcode'], reportcode_names, reportcode_values);" >
+<option value="0" selected="selected">All reports</option>
+<option value="nc">No category</option>
+<option value="6201">Other</option>
+<option value="6801">Shared</option></select>      </td>
+    </tr>
+    <tr>
+      <td width="20%">Report:</td>
+      <td width="80%">
+        <select name="reportcode" id="reportcode" class="mandatory naf-mandatory" onchange='$("action_generate").click()' >
+<option value="">Click to select</option>
+<option value="11">Bonus Usage</option>
+<option value="49401">Casino game session with ip and serial</option>
+<option value="36891">Comps for period</option>
+<option value="1931">Customer Balances Total</option>
+<option value="18001">Frequency report</option>
+<option value="18801">Frequency report by CSV</option>
+<option value="391">Gaming report</option>
+<option value="46401">Manual bonuses</option>
+<option value="42401">Player logins</option>
+<option value="35601" selected="selected">Players login IP and serials</option>
+<option value="52601">Players transactions</option>
+<option value="61001">User-advertiser information summary 2</option>
+<option value="471">VIP Tracking</option></select>                <input  type="submit" name="action[generate]" class="naf-button" value="Show report" style = 'display:none' disabled id='action_generate' onclick="default_on_click(event)" />      </td>
+    </tr>
+  </table>
+
+      <div id="help" style="display : none">
+    <div class="subtitle">Help for 'Players login IP and serials' report</div>
+    <div class="result-container">
+			<center>
+			  <table border=0>
+			  <tr>
+				<td class=text>
+				  <div style="font-weight:bold;text-decoration:underline;margin-bottom:4px;" > Description </div>
+				  This report shows the player's all login IP and serials details
+				  <br /><br />
+				  <div style="font-weight:bold;text-decoration:underline;margin-bottom:4px;" > Business logic </div>
+				  For Fraud use, to catch bonus seekers.
+				  <br /><br />
+				  <div style="font-weight:bold;text-decoration:underline;margin-bottom:4px;" > Input fields: </div>
+				  <ul style="padding-top:0px;margin-top:4px">
+					<li> Casino: 
+					<li> Login start date: 
+					<li> Login end date: 
+					<li> Remote IP:
+					<li> Serial:
+					<li> Username: 
+					<li> Usernames(CSV file): 
+					<li> Include "IP country" output:  
+					<li> Include "Wagered" output:   
+					<li> Delivery platform:  Value of the delivery platform (software container), from player's last login device data </li>
+					<li> Client platform: </li>
+				  </ul>
+				  <div style="font-weight:bold;text-decoration:underline;margin-bottom:4px;" > Output fields: </div>
+				  <ul style="padding-top:0px;margin-top:4px">
+					<li> Username: 
+					<li> Login time: 
+					<li> Logout time: 
+					<li> Start balance: 
+					<li> End balance: 
+					<li> RemoteIP: Player login IP
+					<li> Serial: Player login serail
+					<li> IP country: IP country
+					<li> Country code:
+					<li> Wagered
+				  </ul>
+				  <div style="font-weight:bold;text-decoration:underline;margin-bottom:4px;" > Comments </div>
+				  The report will not show internal  player's info
+				  <br /><br />
+				</td>
+			  </tr>
+			  </table>
+			</center>
+			</div>
+    </div>
+    <div><p align="center"><b>Players login IP and serials</b>
+        <br>
+    <a id="helplink" href="#" onclick="javascript: showhelp('help','helplink');"><img src="images/reports/help.jpg" border="0" vspace="5"></a>
+    </p></div>
+
+  <table class="form">
+                <tr>
+        <td width="50%">
+          Casino                  </td>
+        <td width="50%">
+                      <select name="casino" id="casino" >
+<option value="" selected="selected">Click to select</option>
+<option value="431">mannycasino</option></select>                  </td>
+      </tr>
+            <tr>
+        <td width="50%">
+          Login start date                  </td>
+        <td width="50%">
+                      <script type="text/javascript">typeof(window.NafLoader)=='undefined'&&document.write('<script type="text/javascript" src="/js_lib/loader.js"><\/script>');</script><script type="text/javascript">NafLoader.loadScript("\/js_lib\/datepicker.js");</script>
+<table class="minimal"><tr><td><input class="invalid naf-date mandatory naf-mandatory" name="startdate" id="startdate" type="text" value="2017-06-12 00:00" dateperiod="period" /></td><td><img id="startdate:img" src="https://admin.megasportcasino.com/images/bex/calendar.png" alt="" title="Open calendar" /></td></tr></table>                  </td>
+      </tr>
+            <tr>
+        <td width="50%">
+          Login end date                  </td>
+        <td width="50%">
+                      <script type="text/javascript">typeof(window.NafLoader)=='undefined'&&document.write('<script type="text/javascript" src="/js_lib/loader.js"><\/script>');</script><script type="text/javascript">NafLoader.loadScript("\/js_lib\/datepicker.js");</script>
+<table class="minimal"><tr><td><input class=" naf-date mandatory naf-mandatory" name="enddate" id="enddate" type="text" value="2017-06-22 00:00" dateperiod="period" /></td><td><img id="enddate:img" src="https://admin.megasportcasino.com/images/bex/calendar.png" alt="" title="Open calendar" /></td></tr></table>                  </td>
+      </tr>
+            <tr>
+        <td width="50%">
+          Remote IP                  </td>
+        <td width="50%">
+                      <input name="ip" value="" id="ip" type="text" />                  </td>
+      </tr>
+            <tr>
+        <td width="50%">
+          Serial                  </td>
+        <td width="50%">
+                      <input name="serial" value="" id="serial" type="text" />                  </td>
+      </tr>
+            <tr>
+        <td width="50%">
+          Username                  </td>
+        <td width="50%">
+                      <input name="username" value="" id="username" type="text" />                  </td>
+      </tr>
+            <tr>
+        <td width="50%">
+          Usernames(CSV file)                  </td>
+        <td width="50%">
+                      <input class="naf-file" name="usernamecsv" type="file" size="25"><br>
+            <input class="naf-checkbox" type="checkbox" name="usernamecsv_header" value="1" id="usernamecsv_header" checked="checked" />&nbsp;&#160;File has header line
+                  </td>
+      </tr>
+            <tr>
+        <td width="50%">
+          Include &quot;Wagered&quot; output                  </td>
+        <td width="50%">
+                      <input class="naf-checkbox" type="checkbox" name="includefields1" value="1" id="includefields1" checked="checked" />&nbsp;                  </td>
+      </tr>
+            <tr>
+        <td width="50%">
+          Include &quot;IP country&quot; output                  </td>
+        <td width="50%">
+                      <input class="naf-checkbox" type="checkbox" name="includefields2" value="1" id="includefields2" checked="checked" />&nbsp;                  </td>
+      </tr>
+            <tr>
+        <td width="50%">
+          Unique serial                  </td>
+        <td width="50%">
+                      <input class="naf-checkbox" type="checkbox" name="uniqueserial" value="1" id="uniqueserial" />&nbsp;                  </td>
+      </tr>
+            <tr>
+        <td width="50%">
+          Delivery platform                  </td>
+        <td width="50%">
+                      <select name="dplatform" id="dplatform" >
+<option value="" selected="selected">Click to select</option>
+<option value="Casino Lobby">Casino Lobby</option>
+<option value="Casino3rd">Casino3rd</option>
+<option value="HTML5">HTML5</option>
+<option value="In Flight">In Flight</option>
+<option value="Native">Native</option>
+<option value="Native Proprietary">Native Proprietary</option>
+<option value="Wrapper">Wrapper</option></select>                  </td>
+      </tr>
+            <tr>
+        <td width="50%">
+          Client platform                  </td>
+        <td width="50%">
+                      <select name="clientplatform" id="clientplatform" >
+<option value="" selected="selected">Click to select</option>
+<option value="admin">admin</option>
+<option value="download">download</option>
+<option value="flash">flash</option>
+<option value="ivr">ivr</option>
+<option value="mobile">mobile</option>
+<option value="oncourse">oncourse</option>
+<option value="retailbip">retailbip</option>
+<option value="retailotc">retailotc</option>
+<option value="retailterminal">retailterminal</option>
+<option value="smsbetting">smsbetting</option>
+<option value="system">system</option>
+<option value="telebet">telebet</option>
+<option value="web">web</option></select>                  </td>
+      </tr>
+          
+    
+    <tr>
+      <td colspan="2" class="align-center">
+      <input  type="submit" name="action[sort]" class="naf-button" value="Sort results" disabled id='rty2' style='display:none' onclick="default_on_click(event)" />                    <br>
+        <input class="naf-checkbox" type="checkbox" name="showquery" value="1" id="showquery" />&nbsp;Show report query and plan
+            <br>
+      File name structure: <input class="naf-radio" type="radio" name="filename" value="report" id="filename" checked="checked" /> Report <input class="naf-radio" type="radio" name="filename" value="namedate" id="filename" /> Name+Date
+      <br>
+       Show <select name="rowsperpage" id="rowsperpage" >
+<option>50</option>
+<option selected="selected">100</option>
+<option>500</option>
+<option>1000</option>
+<option>1500</option></select> rows per page.
+      <input  type="submit" name="action[submit]" class="naf-button" value="Show results" disabled id='rty1' onclick="default_on_click(event)" />            <br>
+      <input id="action[exportcsv]" type="submit" name="action[exportcsv]" class="naf-button" value="Export all results (CSV)" disabled onclick="default_on_click(event)" />      <input id="action[exportxml]" type="submit" name="action[exportxml]" class="naf-button" value="Export all results (XML)" disabled onclick="default_on_click(event)" />      
+
+            </td>
+    </tr>
+  </table>
+<div class="messages">
+  <div class="info" id="message-info-1">Invalid Date. Please enter the date in the following format: 1970-11-23</div>
+</div>
+<script language="Javascript">
+var msg = {"method": "pageLoaded", "params": {"title": document.title, "url" : window.location.href}};
+window.parent.postMessage(JSON.stringify(msg), "*");
+</script>
